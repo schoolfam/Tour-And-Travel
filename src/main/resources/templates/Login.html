@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Login</title>
+    <link rel="stylesheet" th:href="@{/css/bootstrap.css}"/>
+    <link rel="stylesheet" th:href="@{/css/font_awsome/all.css}"/>
+    <link rel="stylesheet" th:href="@{/css/style.css}"/>
+
+</head>
+<body>
+
+<header>
+    <nav class="navbar navbar-expand-lg navbar-light">
+        <a href="#" class="navbar-brand ml-3">TOUR & TRAVEL </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarMenu" aria-controls="navbarMenu"
+                aria-expanded="false" aria-label="Toggle Navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="navbar-collapse"></div>
+        <div class="navbar-collapse  collapse" id="navbarMenu">
+            <ul class="navbar-nav mr-auto" >
+                <li class="nav-item ">
+                    <a href="/" class="nav-link ">Home</a>
+                </li>
+
+                <li class="nav-item ">
+                    <a href="#" class="nav-link">Attractions</a>
+                </li>
+
+                <li class="nav-item ">
+                    <a href="#" class="nav-link">About Us</a>
+                </li>
+            </ul>
+
+            <form action="registration" class="form-inline my-2 my-lg-0">
+                <button class="btn menu-right-btn border">Register</button>
+            </form>
+        </div>
+    </nav>
+</header>
+<div class="row">
+
+</div>
+<br><br>
+<form  id="loginForm" method="POST" th:object="${user}" >
+    <h1>LOGIN HERE</h1>
+    <div class="form-group"><label for="email">Email</label>
+        <input type="email" name="email"id="email" class="form-control" >
+        <span class="validationError"
+            th:if="${#fields.hasErrors('email')}" 
+            th:errors="*{email}">Name Error</span>
+        </div>
+    <div class="form-group">
+        <label for="password">Password</label>
+        <input type="password" name="password"id="password" class="form-control">
+        <span class="validationError"
+            th:if="${#fields.hasErrors('password')}" 
+            th:errors="*{password}">Name Error</span>
+    </div>
+    <div class="form-group">
+        <button type="submit" class="btn btn-outline-secondary">Log In</button>
+    </div>
+
+</form>
+
+<script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+<script type="text/javascript " src="js/bootstrap.js"></script>
+</body>
+</html>
