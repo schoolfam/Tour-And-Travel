@@ -3,7 +3,7 @@
       xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
-    <title>Login</title>
+    <title>Tour And Travel Ethiopia</title>
     <link rel="stylesheet" th:href="@{/css/bootstrap.css}"/>
     <link rel="stylesheet" th:href="@{/css/font_awsome/all.css}"/>
     <link rel="stylesheet" th:href="@{/css/style.css}"/>
@@ -15,45 +15,92 @@
     <nav class="navbar navbar-expand-lg navbar-light">
         <a href="#" class="navbar-brand ml-3">TOUR & TRAVEL </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarMenu" aria-controls="navbarMenu"
-                aria-expanded="false" aria-label="Toggle Navigation">
+        aria-expanded="false" aria-label="Toggle Navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
 
         <div class="navbar-collapse"></div>
         <div class="navbar-collapse  collapse" id="navbarMenu">
             <ul class="navbar-nav mr-auto" >
-                <li class="nav-item ">
-                    <a href="/" class="nav-link ">Home</a>
+                <li class="nav-item  active">
+                    <a href="#" class="nav-link active">Home</a>
                 </li>
 
                 <li class="nav-item ">
-                    <a href="#" class="nav-link">Attractions</a>
+                    <a th:href="@{Package}" class="nav-link">Add Package</a>
+                </li>
+                <li class="nav-item ">
+                    <a th:href="@{ViewPackage}" class="nav-link">View Packages</a>
+                </li>
+                <li class="nav-item ">
+                    <a th:href="@{EditPackage}"class="nav-link">Edit Packages</a>
+                </li>
+                <li class="nav-item">
+                    <a th:href="@{Advertisement}"class="nav-link">Advertisement</a>
                 </li>
 
                 <li class="nav-item ">
-                    <a href="#" class="nav-link">About Us</a>
+                    <a href="#" class="nav-link">Profile</a>
                 </li>
             </ul>
 
-            <div class="my-2 my-lg-0">
-            <a href="#" th:text="${users.getUserName()}"></a><br>
-            <a href="#"> Travel Agent </a>
-            </div>
         </div>
     </nav>
 </header>
-<div class="row">
 
+<div class="container-fluid">
+    <div class="row>">
+        <div class="col-sm-12">
+            <div id="slider" class="carousel slide" data-ride="carousel">
+                <ol class="carousel-indicators">
+                    <li data-target="#slider" data-slide-to="0" class="active"></li>
+                    <li data-target="#slider" data-slide-to="1"></li>
+                    <li data-target="#slider" data-slide-to="2"></li>
+                </ol>
+
+
+                <div class="carousel-inner" role="listbox">
+                    <div class="carousel-item active">
+                        <img th:src="@{/img/Hamlin-South-Ethiopia-Adventure-2014-380903-1100px-16x7.jpg}"/>
+                        <div class="carousel-caption ">
+                            <h1>WELCOME TO ETHIOPIA</h1>
+                            <p>Land of Origin and Home of Tourists <br>Where you will not be disapointed by visiting</p>
+                            <button type="button" class="btn btn-outline-light">Learn More</button>
+                        </div>
+                    </div>
+                    <div class="carousel-item ">
+                        <img th:src="@{/img/travelling-in-south-africa-tours-and-vacation-packages-1503895090-1920X700.jpg}"/>
+                        <div class="carousel-caption ">
+                            <h1>WELCOME TO ETHIOPIA</h1>
+                            <p>Land of Origin and Home of Tourists <br>Where you will not be disapointed by visiting</p>
+                            <button type="button" class="btn btn-outline-light">Learn More</button>
+                        </div>
+                    </div>
+                    <div class="carousel-item ">
+                        <img th:src="@{/img/Tour-Ethiopia.jpg}"/>
+                        <div class="carousel-caption ">
+                            <h1>WELCOME TO ETHIOPIA</h1>
+                            <p>Land of Origin and Home of Tourists <br>Where you will not be disapointed by visiting</p>
+                            <button type="button" class="btn btn-outline-light">Learn More</button>
+                        </div>
+                    </div>
+                </div>
+
+                <a class="carousel-control-prev" href="#slider" role="button" data-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Previous</span>
+                </a>
+                <a class="carousel-control-next" href="#slider" role="button" data-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Next</span>
+                </a>
+
+            </div>
+        </div>
+    </div>
 </div>
-<br><br>
 
-
-
-<p>Dash Board for Agent</p>
-<h1 th:text="${users.getFirstName().toUpperCase()}" ></h1>
-<h1 th:text="${users.getLastName().toUpperCase()}" ></h1>
-<p>Goes Here</p>
-
-
+<script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+<script type="text/javascript " src="js/bootstrap.js"></script>
 </body>
 </html>

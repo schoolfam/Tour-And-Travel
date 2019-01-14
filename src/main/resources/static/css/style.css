@@ -66,3 +66,25 @@ h1{
         width: 20%; margin: auto
     }
 }
+
+@media (min-width: 500px) {
+    #packageForm{
+        width: 50%; margin: auto
+    }
+}
+@media (min-width: 100px) {
+    #packageForm{
+        width: 30%; margin: auto
+    }
+}
+
+@media (min-width: 500px) {
+    #newsForm{
+        width: 50%; margin: auto
+    }
+}
+@media (min-width: 100px) {
+    #newsForm{
+        width: 30%; margin: auto
+    }
+}

@@ -3,12 +3,132 @@
 <html xmlns="http://www.w3.org/1999/xhtml"
       xmlns:th="http://www.thymeleaf.org">
 <head>
-<meta charset="ISO-8859-1">
-<title>Welcome User</title>
+	<meta charset="UTF-8">
+    <title>Add Package</title>
+    <link rel="stylesheet" th:href="@{/css/bootstrap.css}"/>
+    <link rel="stylesheet" th:href="@{/css/font_awsome/all.css}"/>
+    <link rel="stylesheet" th:href="@{/css/style.css}"/>
 </head>
 <body>
-<h3>Hello I am package:</h3>
 
+<header>
+    <nav class="navbar navbar-expand-lg navbar-light">
+        <a href="#" class="navbar-brand ml-3">TOUR & TRAVEL </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarMenu" aria-controls="navbarMenu"
+                aria-expanded="false" aria-label="Toggle Navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="navbar-collapse"></div>
+        <div class="navbar-collapse  collapse" id="navbarMenu">
+            <ul class="navbar-nav mr-auto" >
+                <li class="nav-item ">
+                    <a href="/" class="nav-link ">Home</a>
+                </li>
+
+                <li class="nav-item ">
+                    <a href="#" class="nav-link">Attractions</a>
+                </li>
+
+                <li class="nav-item ">
+                    <a href="#" class="nav-link">About Us</a>
+                </li>
+            </ul>
+
+            <form action="login" class="form-inline my-2 my-lg-0">
+                <button class="btn menu-right-btn border">Login</button>
+            </form>
+        </div>
+    </nav>
+</header>
+
+<br><br>
+<form  id="packageForm" method="POST">
+    <h2>ADD TOUR PACKAGE</h2>
+    <div class="form-group">
+        <label for=package_id>Package ID</label>
+        <input type="text" name="package_id" placeholder="Enter the Package ID here" id="package_id" class="form-control">
+    </div>
+    <div class="form-group">
+        <label for="place">Add Place</label>
+        <input type="text" name="place" placeholder="Enter the Place here" id="place" class="form-control">
+    </div>
+    <div class="form-group">
+        <label for="adults">Number of Adults</label>
+        <input type="text" name="adults" placeholder="Enter the Number of Adults" id="adults" class="form-control">
+    </div>
+    <div class="form-group">
+        <label for="children">Number of Children</label>
+        <input type="text" name="children" placeholder="Enter the Number of Children" id="children" class="form-control">
+    </div>
+    <div class="form-group">
+        <label for="description">Description</label>
+        <input type="text" name="lastName" placeholder="Enter the Description here" id="lastName" class="form-control">
+    </div>
+    
+    <div class="form-group">
+        <label for=stay>Stay Amount</label>
+        <input type="text" name="stay" placeholder="Enter the Amount of Stay" id="stay" class="form-control">
+    </div>
+    <div class="form-group">
+        <label for="food">Food Amount</label>
+        <input type="text" name="food" placeholder="Enter the Amount of Food" id="food" class="form-control">
+    </div>
+    <div class="form-group">
+        <label for="bus">Bus Amount</label>
+        <input type="text" name="bus" placeholder="Enter the Amount of Bus" id="bus" class="form-control">
+    </div>
+    <div class="form-group">
+        <label for="train">Train Amount</label>
+        <input type="text" name="train"  placeholder="Enter the Amount of Train" id="train" class="form-control">
+    </div>
+    <div class="form-group">
+        <label for="airlines ">Airlines Amount</label>
+        <input type="text" name="airlines" placeholder="Enter the Amount of Airlines" id="airlines" class="form-control">
+    </div>
+    
+    <div class="form-group">
+		<label for="day">Number Of Days</label>
+        <select name="accountType" id="accountType" class="form-control">
+            <option value="0" >1</option>
+            <option value="1" >2</option>
+            <option value="2"selected>3</option>
+            <option value="3" >4</option>
+            <option value="4">5</option>
+            <option value="5" >6</option>
+            <option value="6">7</option>
+            <option value="7" >8</option>
+            <option value="8">9</option>
+            <option value="9" >10</option>
+        </select>
+    </div>
+    <div class="form-group">
+		<label for="night">Number Of Days</label>
+        <select name="accountType" id="accountType" class="form-control">
+            <option value="0" >1</option>
+            <option value="1" >2</option>
+            <option value="2"selected>3</option>
+            <option value="3" >4</option>
+            <option value="4">5</option>
+            <option value="5" >6</option>
+            <option value="6">7</option>
+            <option value="7" >8</option>
+            <option value="8">9</option>
+            <option value="9" >10</option>
+        </select>
+    </div>
+    
+    <div class="form-group">
+        <button type="submit" class="btn btn-outline-secondary">Submit</button>
+    </div>
+	
+</form>
+		
+
+
+ 
+<script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+<script type="text/javascript " src="js/bootstrap.js"></script>
 
 
 </body>
