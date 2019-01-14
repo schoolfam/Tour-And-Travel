@@ -9,6 +9,7 @@ public class AgentPageController {
 	public String Package() {
 	    return "Agent/Package";
 	}
+	
 	@RequestMapping("/Advertisement")
 	public String advert() {
 		return "Agent/Advertisement";
