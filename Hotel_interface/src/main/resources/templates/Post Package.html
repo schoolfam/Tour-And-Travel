@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+ <title>Hotel</title>
+ <link rel="stylesheet" th:href="@{/css/boot4.css}" />
+<link rel="stylesheet" th:href="@{/css/TryingCss.css}">
+</head>
+
+  
+  
+
+<body>
+
+  
+<div id="booking" class="section">
+
+<aside>
+  <ul>
+       <li><span><a href="#">Home</a></span><span></span></li>
+         <li><span><a href="#">Post Package</a></span><span></span></li>
+         <li><span><a href="#">Manage Booking</a></span><span></span></li>
+        <li><span><a href="#"> User's Book</a></span><span></span></li>
+   
+         <li><span><a href="#">Post Advertisement</a></span><span></span></li>
+         <li><span><a href="#">Manage Booking</a></span><span></span></li>
+        <li><span><a href="#"> Logout</a></span><span></span></li>
+    </ul>
+</aside>
+
+ <div class="section-center">
+      <div class="container">
+        <div class="row">
+          <div class="booking-form">
+            <div class="form-header">
+              <h1>Fill in Package</h1>
+            </div>
+            <form>
+              <div class="row">
+                <div class="col-sm-6">
+                  <div class="form-group">
+                    <span class="form-label">Package Name</span>
+                    <input class="form-control" type="text" placeholder="Enter Package name">
+                  </div>
+                </div>
+                <div class="col-sm-6">
+                  <div class="form-group">
+                    <span class="form-label">Food Price</span>
+                    <input class="form-control" type="email" placeholder="Enter Price of Food">
+                  </div>
+                </div>
+              </div>
+
+       
+ 
+
+         
+              <div class="form-group">
+                <span class="form-label">Description</span>
+                <textarea class="form-control" id="area" type="text"  placeholder="Enter Description" rows="3"></textarea> 
+              
+            </div>
+
+
+ 
+
+
+              <div class="row">
+                <div class="col-sm-4">
+
+              <div class="form-group">
+                <span class="form-label">Path</span>
+                <input class="form-control" type="text" placeholder="Enter ZIP/Location">
+              </div>
+
+            </div>
+   <div class="col-sm-4">
+                      <div class="form-group">
+                        <span class="form-label">Adult Capacity</span>
+                        <select class="form-control">
+                          <option>1</option>
+                          <option>2</option>
+                          <option>3</option>
+                          <option>4</option>
+                          <option>5</option>
+                          <option>6</option>
+                          <option>7</option>
+                          <option>8</option>
+                          <option>9</option>
+                          <option>10</option>
+                          <option>11</option>
+                          <option>12</option>
+                        </select>
+                        <span class="select-arrow"></span>
+                      </div>
+                    </div>
+
+                    <div class="col-sm-4">
+                      <div class="form-group">
+                        <span class="form-label">Children Capacity</span>
+                        <select class="form-control">
+                          <option>1</option>
+                          <option>2</option>
+                          <option>3</option>
+                          <option>4</option>
+                          <option>5</option>
+                          <option>6</option>
+                          <option>7</option>
+                          <option>8</option>
+                          <option>9</option>
+                          <option>10</option>
+                          <option>11</option>
+                          <option>12</option>
+                        </select>
+                        <span class="select-arrow"></span>
+                      </div>
+                    </div>
+            </div>
+
+            
+
+              <div class="row">
+                <div class="col-sm-4">
+                  <div class="form-group">
+                    <span class="form-label">Stay Amount</span>
+                    <input class="form-control" type="text" placeholder="Stay Amount" required>
+                  </div>
+                </div>
+                
+                    <div class="col-sm-4">
+                      <div class="form-group">
+                        <span class="form-label">Days</span>
+                        <select class="form-control">
+                          <option>1</option>
+                          <option>2</option>
+                          <option>3</option>
+                          <option>4</option>
+                          <option>5</option>
+                          <option>6</option>
+                          <option>7</option>
+                          <option>8</option>
+                          <option>9</option>
+                          <option>10</option>
+                          <option>11</option>
+                          <option>12</option>
+                        </select>
+                        <span class="select-arrow"></span>
+                      </div>
+                    </div>
+                    <div class="col-sm-4">
+                      <div class="form-group">
+                        <span class="form-label">Nights</span>
+                        <select class="form-control">
+                             <option>1</option>
+                          <option>2</option>
+                          <option>3</option>
+                          <option>4</option>
+                          <option>5</option>
+                          <option>6</option>
+                          <option>7</option>
+                          <option>8</option>
+                          <option>9</option>
+                          <option>10</option>
+                          <option>11</option>
+                          <option>12</option>
+                        </select>
+                        <span class="select-arrow"></span>
+                      </div>
+                    </div>
+                   
+                  </div>
+              
+              <div class="form-btn">
+                <button class="submit-btn">Post Package</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+</body>
+</html>
