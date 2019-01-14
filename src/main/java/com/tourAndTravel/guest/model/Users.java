@@ -2,6 +2,7 @@ package com.tourAndTravel.guest.model;
 
 
 import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.Size;
 
 import lombok.Data;
 
@@ -29,14 +30,17 @@ public class Users {
 	private int id;
 	
 	@NotBlank(message="First Name is required")
+	@Size(min=0, max=20,message="First Name too long, 20 characters max")
 	@Column(name="first_name")
 	private String firstName;
 	
 	@NotBlank(message="Last Name is required")
+	@Size(min=0, max=20,message="Last Name too long, 20 characters max")
 	@Column(name="last_name")
 	private String lastName;
 	
 	@NotBlank(message="User Name is required")
+	@Size(min=0, max=25,message="User Name too long, 25 characters max")
 	@Column(name="user_name")
 	private String userName;
 	
@@ -46,6 +50,7 @@ public class Users {
 	private String email;
 	
 	@NotBlank(message="Password is required")
+	@Size(min=0, max=30,message="Password too long, 30 characters max")
 	@Column(name="password")
 	private String password;
 	
