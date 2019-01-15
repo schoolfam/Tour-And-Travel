@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Registration</title>
+     <link rel="stylesheet" th:href="@{/css/bootstrap.css}"/>
+    <link rel="stylesheet" th:href="@{/css/font_awsome/all.css}"/>
+    <link rel="stylesheet" th:href="@{/css/style.css}"/>
+
+</head>
+<body>
+
+<header>
+    <nav class="navbar navbar-expand-lg navbar-light">
+        <a href="#" class="navbar-brand ml-3">TOUR & TRAVEL </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarMenu" aria-controls="navbarMenu"
+                aria-expanded="false" aria-label="Toggle Navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="navbar-collapse"></div>
+        <div class="navbar-collapse  collapse" id="navbarMenu">
+            <ul class="navbar-nav mr-auto" >
+                <li class="nav-item ">
+                    <a href="/" class="nav-link ">Home</a>
+                </li>
+
+                <li class="nav-item ">
+                    <a href="#" class="nav-link">Attractions</a>
+                </li>
+
+                <li class="nav-item ">
+                    <a href="#" class="nav-link">About Us</a>
+                </li>
+            </ul>
+
+            <form action="login" class="form-inline my-2 my-lg-0">
+                <button class="btn menu-right-btn border">Login</button>
+            </form>
+        </div>
+    </nav>
+</header>
+<div class="row">
+
+</div>
+<br><br>
+<form  id="registrationForm" th:action="@{/registration}" method="POST" th:object="${user}">
+    <h1>REGISTER HERE</h1>
+    <div class="form-group">
+        <label for="firstName">First Name</label>
+        <input type="text" name="firstName" id="firstName" class="form-control" th:field="*{firstName}">
+        <span class="validationError"
+            th:if="${#fields.hasErrors('firstName')}" 
+            th:errors="*{firstName}">Name Error</span>
+    </div>
+    <div class="form-group">
+        <label for="lastName">Last Name</label>
+        <input type="text" name="lastName"id="lastName" class="form-control" th:field="*{lastName}">
+        <span class="validationError"
+            th:if="${#fields.hasErrors('lastName')}" 
+            th:errors="*{lastName}">Name Error</span>
+    </div>
+    <div class="form-group">
+        <label for="userName">User Name</label>
+        <input type="text" name="userName"id="userName" class="form-control" th:field="*{userName}">
+        <span class="validationError"
+            th:if="${#fields.hasErrors('userName')}" 
+            th:errors="*{userName}">Name Error</span>
+    </div>
+    <div class="form-group"><label for="email">Email</label>
+        <input type="email" name="email"id="email" class="form-control" th:field="*{email}">
+        <span class="validationError"
+            th:if="${#fields.hasErrors('email')}" 
+            th:errors="*{email}">Name Error</span>
+        </div>
+    <div class="form-group">
+        <label for="password">Password</label>
+        <input type="password" name="password"id="password" class="form-control" th:field="*{password}">
+        <span class="validationError"
+            th:if="${#fields.hasErrors('password')}" 
+            th:errors="*{password}">Name Error</span>
+    </div>
+    <div class="form-group">
+        <select name="accountType" id="accountType" class="form-control" th:field="*{role_id}">
+            <option value="0"selected >Tourist </option>
+            <option value="1" >Travel Agent </option>
+            <option value="2">Hotel </option>
+        </select>
+    </div>
+    <div class="form-group">
+        <button type="submit" class="btn btn-outline-secondary">Register</button>
+    </div>
+
+</form>
+		
+
+
+ 
+<script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+<script type="text/javascript " src="js/bootstrap.js"></script>
+</body>
+</html>

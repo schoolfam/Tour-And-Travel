@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Login</title>
+    <link rel="stylesheet" th:href="@{/css/bootstrap.css}"/>
+    <link rel="stylesheet" th:href="@{/css/font_awsome/all.css}"/>
+    <link rel="stylesheet" th:href="@{/css/style.css}"/>
+
+</head>
+<body>
+
+<header>
+    <nav class="navbar navbar-expand-lg navbar-light">
+        <a href="#" class="navbar-brand ml-3">TOUR & TRAVEL </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarMenu" aria-controls="navbarMenu"
+                aria-expanded="false" aria-label="Toggle Navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="navbar-collapse"></div>
+        <div class="navbar-collapse  collapse" id="navbarMenu">
+            <ul class="navbar-nav mr-auto" >
+                <li class="nav-item ">
+                    <a href="/" class="nav-link ">Home</a>
+                </li>
+
+                <li class="nav-item ">
+                    <a href="#" class="nav-link">Attractions</a>
+                </li>
+
+                <li class="nav-item ">
+                    <a href="#" class="nav-link">About Us</a>
+                </li>
+            </ul>
+
+            <div class="my-2 my-lg-0">
+            <a href="#" th:text="${users.getUserName()}"></a><br>
+            <a href="#"> Hotel </a>
+            </div>
+        </div>
+    </nav>
+</header>
+<div class="row">
+
+</div>
+<br><br>
+
+
+
+<p>Dash Board for Hotel</p>
+<h1 th:text="${users.getFirstName().toUpperCase()}" ></h1>
+<h1 th:text="${users.getLastName().toUpperCase()}" ></h1>
+<p>Goes Here</p>
+
+
+</body>
+</html>

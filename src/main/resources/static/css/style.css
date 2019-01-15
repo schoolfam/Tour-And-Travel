@@ -1,0 +1,68 @@
+html{
+    margin: 0;
+    padding: 0;
+    font-family: 'lato';
+}
+.navbar-brand{
+    font-family: 'avicii';
+    font-size: 25px;
+}
+.nav-link{
+    color: black !important;
+    font-family: 'Roboto Condensed', sans-serif;
+    margin: 15px;
+    transition: all 300ms ease-in;
+}
+.nav-link:hover{
+    color: palevioletred !important;
+}
+.active .nav-link{
+    color: palevioletred !important;
+}
+.menu-right-btn{
+    padding: 13px 46px;
+    background-color: transparent;
+    transition: all 300ms ease-in;
+}
+.menu-right-btn:hover{
+    color: white;
+    background-color:palevioletred !important ;
+}
+.carousel-inner > .carousel-item {
+    width: 100%!important;
+   height:100%!important;
+}
+.carousel-inner > .carousel-item >img{
+    width: 100%!important;
+    height:750px;
+}
+.carousel-caption{
+    top: 30%;
+}
+h1{
+
+    font-family: 'avicii';
+}
+
+
+
+@media (min-width: 500px) {
+    #registrationForm{
+        width: 50%; margin: auto
+    }
+}
+@media (min-width: 100px) {
+    #registrationForm{
+        width: 30%; margin: auto
+    }
+}
+@media (min-width: 500px) {
+    #loginForm{
+        width: 20%; margin: auto
+    }
+}
+@media (min-width: 100px) {
+    #loginForm{
+        width: 20%; margin: auto
+    }
+}
