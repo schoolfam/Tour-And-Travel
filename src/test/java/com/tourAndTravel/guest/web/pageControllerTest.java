@@ -1,7 +1,6 @@
 package com.tourAndTravel.guest.web;
 
-import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.*;
-import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
+import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.view;
 
 import org.junit.Test;
@@ -17,34 +16,35 @@ import com.tourAndTravel.guest.Services.CustomUserDetailsService;
 import com.tourAndTravel.guest.repository.RoleRepository;
 import com.tourAndTravel.guest.repository.UserRepository;
 
-
-
 @RunWith(SpringRunner.class)
-@WebMvcTest(RegistrationController.class)
-public class RegistrationControllerTest 
-{
-  
-  @Autowired
-  private MockMvc mockMvc;
+@WebMvcTest(pageController.class)
+public class pageControllerTest {
 
-  @MockBean
-  private CustomUserDetailsService customUserDetailsService;
-  
-  @MockBean
-  private UserRepository userRepository;
-  
-  @MockBean
+	@Autowired
+	private MockMvc mockMvc;
+
+	@MockBean
+	private CustomUserDetailsService customUserDetailsService;
+	
+	@MockBean
+	private UserRepository userRepository;
+	
+	@MockBean
     private RoleRepository roleRepository;
     
-  @MockBean
-  private BCryptPasswordEncoder bCryptPasswordEncoder;
+	@MockBean
+	private BCryptPasswordEncoder bCryptPasswordEncoder;
 
-  @Test
-  public void testshowDesignForm() throws Exception 
-  {
-    mockMvc.perform(get("/registration"))
-          .andExpect(status().isOk())
-          .andExpect(view().name("Registration"));
-   }
-
+	@Test
+	public void testshow() throws Exception 
+	{
+		mockMvc.perform(get("/"))
+	        .andExpect(view().name("Home"));
+	 }
+	@Test
+	public void testdashboard() throws Exception 
+	{
+		mockMvc.perform(get("/dashboard"))
+	        .andExpect(view().name("Dashboard"));
+	 }
 }
