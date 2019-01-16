@@ -16,9 +16,9 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 
+import com.tourAndTravel.guest.Services.UserService;
 import com.tourAndTravel.guest.model.Users;
 import com.tourAndTravel.guest.repository.UserRepository;
-import com.tourAndTravel.guest.repository.UserService;
 
 @Controller
 @RequestMapping("/login")

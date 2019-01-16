@@ -31,14 +31,6 @@ public class CustomUserDetailsService implements UserDetailsService
         this.bCryptPasswordEncoder = bCryptPasswordEncoder;
     }
 
-    public void saveUser(Users user)
-    {
-    	user.setPassword(bCryptPasswordEncoder.encode(user.getPassword()));
-        Role userRole = roleRepository.findByRole("USER");
-        user.setRoles(new HashSet<Role>(Arrays.asList(userRole)));
-        userRepository.save(user);
-    }
-
     public Users findUserByUsername(String username)
     {
     	return userRepository.findByUserName(username);
@@ -50,7 +42,7 @@ public class CustomUserDetailsService implements UserDetailsService
 		
 		Users user = userRepository.findByUserName(username);
 		
-		if(user != null) {
+		     if(user != null) {
 			return new CustomUserDetails(user);
 		}
 		throw new UsernameNotFoundException("User '" + username + "' not found");

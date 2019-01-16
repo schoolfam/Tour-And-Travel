@@ -1,4 +1,4 @@
-package com.tourAndTravel.guest.repository;
+package com.tourAndTravel.guest.Services;
 
 import com.tourAndTravel.guest.model.Users;
 
