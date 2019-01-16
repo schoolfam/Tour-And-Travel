@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @EnableGlobalMethodSecurity(prePostEnabled = true)
 @Controller
 public class pageController {
-@PreAuthorize("hasAnyRole('TOURIST')")	
+@PreAuthorize("hasAnyRole('TOURIST')")
 @RequestMapping("/")
 public String show() {
 	return "Home";
