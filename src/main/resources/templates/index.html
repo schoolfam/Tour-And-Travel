@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8"/>
+    <link rel="stylesheet" th:href="@{css/bootstrap.css}">
+    <link rel="stylesheet" th:href="@{css/style.css}">
+    <link rel="stylesheet" th:href="@{css/font_awsome/all.css}">
+    <title>Home</title>
+</head>
+<body>
+
+<div class="container card" >
+    <ul class="list-group" th:each="hotel : ${hotel}">
+        <p>name of hotels</p>
+        <li class="list-group-item-primary" th:text="${hotel.hotel_name}">Name</li>
+    </ul>
+
+</div>
+
+</body>
+</html>

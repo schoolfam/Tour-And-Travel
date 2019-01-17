@@ -45,7 +45,7 @@
 
 </div>
 <br><br>
-<form  id="registrationForm" method="POST" th:object="${user}">
+<form  id="registrationForm" th:action="@{/registration}" method="POST" th:object="${user}">
     <h1>REGISTER HERE</h1>
     <div class="form-group">
         <label for="firstName">First Name</label>
