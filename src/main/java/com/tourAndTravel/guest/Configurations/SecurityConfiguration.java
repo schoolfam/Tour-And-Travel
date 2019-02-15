@@ -27,7 +27,8 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
     @Override
     protected void configure(AuthenticationManagerBuilder auth)
             throws Exception {
-        auth.userDetailsService(userDetailsService)
+            auth
+                .userDetailsService(userDetailsService)
                 .passwordEncoder(bCryptPasswordEncoder);
     }
 
@@ -38,12 +39,13 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
                 .antMatchers("/Login").permitAll()
                 .antMatchers("/Login").permitAll()
                 .antMatchers("/").permitAll()
+                .antMatchers("/dashboard").hasRole("TOURIST")
                 .antMatchers("/registration").permitAll()
                 .anyRequest().authenticated()
                 .and()
                 .formLogin()
                 .loginPage("/Login").failureUrl("/Login?error=true")
-                .defaultSuccessUrl("/dashboard")
+                .defaultSuccessUrl("/default")
                 .and()
                 .logout()
                 .logoutRequestMatcher(new AntPathRequestMatcher("/logout"))

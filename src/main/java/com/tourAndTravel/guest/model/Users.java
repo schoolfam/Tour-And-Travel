@@ -1,22 +1,13 @@
 package com.tourAndTravel.guest.model;
 
 
+import javax.persistence.*;
 import javax.validation.constraints.NotBlank;
 
 import lombok.Data;
 
 import java.util.Set;
 
-import javax.persistence.CascadeType;
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.JoinColumn;
-import javax.persistence.JoinTable;
-import javax.persistence.ManyToMany;
-import javax.persistence.Table;
 import javax.validation.constraints.Email;
 
 
@@ -52,7 +43,7 @@ public class Users {
 	@Column(name="role_id")
 	private int role_id;
 	
-	@ManyToMany(cascade = CascadeType.ALL)
+	@ManyToMany(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
 	@JoinTable(name = "users_role",joinColumns = @JoinColumn(name="user_id"),inverseJoinColumns = @JoinColumn(name = "role_id"))
 	private Set<Role> roles;
 	

@@ -59,7 +59,21 @@ public class RegistrationController {
 	    user.setPassword(bt.encode(user.getPassword()));
 		System.out.println(user.getFirstName());
 		System.out.println(user.getLastName());
-		Role role = roleRepository.findByRole("TOURIST");
+		Role role;
+		if(user.getRole_id()==1){
+			role = roleRepository.findByRole("AGENT");
+		}
+		else if(user.getRole_id()==2){
+			role = roleRepository.findByRole("HOTEL");
+		}
+		else if(user.getRole_id()==3){
+			role = roleRepository.findByRole("ADMIN");
+		}
+		else {
+			role = roleRepository.findByRole("TOURIST");
+		}
+
+
 		user.setRoles(new HashSet<Role>(Arrays.asList(role)));
 		userRepository.save(user);
 	    
